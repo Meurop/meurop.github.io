@@ -1,0 +1,45 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif; /* とりあえず基本のフォント */
+    background-color: #ffe0f0; /* 背景をうすーいピンクに！ */
+    color: #333;
+    text-align: center; /* 全体的に中央寄せしてみる？ */
+}
+
+h1 {
+    color: #ff69b4; /* ホットピンク！鉄板！ */
+    text-shadow: 1px 1px 2px #fff; /* 文字に白い影つけてちょい浮き！ */
+}
+
+.profile-section {
+    background-color: #fff0f5; /* さらに薄いピンクの背景 */
+    border: 2px dashed #ffb6c1; /* 点線の枠線！ */
+    padding: 15px;
+    margin: 20px auto; /* 上下に20px、左右は自動で中央 */
+    width: 80%; /* 幅は80%くらいに */
+    border-radius: 10px; /* 角を丸く！ */
+}
+
+.game-info ul {
+    list-style-type: '🎮 '; /* リストの先頭にゲームコントローラーの絵文字！ */
+    padding-left: 20px;
+    display: inline-block; /* 中身に合わせて幅取るように */
+    text-align: left; /* リストの中身は左寄せ */
+}
+
+button {
+    background-color: #ffc107; /* ボタンは目立つ黄色！ */
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer; /* マウス乗せたら指マークになるやつ */
+    box-shadow: 2px 2px 3px #aaa;
+    transition: transform 0.2s ease; /* アニメーションを滑らかに */
+}
+
+button:hover {
+    transform: scale(1.1); /* マウス乗せたらちょいデカく！ */
+    background-color: #ffda6b;
+}
