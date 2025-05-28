@@ -1,51 +1,42 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+---
+# メウロぷのページへようこそ
+# ツイフィ兼ポートフォリオ兼ブログ
+# 自分で `page` レイアウトをカスタマイズしたりするよ。
+# とりあえず、シンプルなページ用として `page` か `default` を想定してみるね。
+layout: page # または default (君のテーマに合わせてね！)
+title: ボクの最強ゲーミングワールドへようこそ！ # ページのタイトル（ブラウザのタブとかに出るやつ）
+permalink: / # これでこのページがサイトのトップページ (https://ユーザー名.github.io/) になるよ
+---
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+ようこそ！ここは【君の名前】のゲーミングワールドだよ！
+シャドウバースの大会実績や、色んなゲームのランク、活動情報を発信していくから、チェックしてね！🎮🔥
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+## 🏆 大会実績 (Shadowverse Achievements) 🏆
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+熱いバトルを繰り広げてます！応援よろしく！
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+* **〇〇 RAGE (YYYY年MM月):** Day1突破！次はもっと上へ！
+* **△△オンライン大会 (YYYY年MM月):** ベスト16入賞！
+* **□□店舗大会 (YYYY年MM月):** 優勝！やったぜ！🥇
 
-jobs:
-  # Build job
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+## 🎮 ゲームランク (Game Ranks) 🎮
 
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+現在プレイしてる主なゲームとランクはこんな感じ！気軽にフレンド申請してね！
+
+| ゲームタイトル     | ランク/ステータス | 最高到達点     | ひとことコメント                               |
+|----------------|---------------|------------|--------------------------------------------|
+| Shadowverse    | Master        | Grand Master | 〇〇クラスメインで日々精進！デッキ相談歓迎！        |
+| VALORANT       | ダイヤモンド 2   | アセンダント 1 | 夜メインでプレイ中！撃ち合い強くなりたい！        |
+| APEX LEGENDS   | プラチナ IV     | マスター     | カジュアルもランクもエンジョイ！好きなレジェンドは〇〇！ |
+| (他のゲーム)    | (現在のランク)   | (最高ランク) | (何かコメント！)                               |
+
+## 🔗 SNS & 配信リンク (My Links) 🔗
+
+フォローやチャンネル登録してくれたら、マジでモチベ爆上がりします！いつも応援ありがとう！💖
+
+* **X (旧Twitter):** [![Xのアイコンとか](ここにXアイコン画像のURLとかあれば)](https://twitter.com/あなたのXアカウント) [@あなたのXアカウント](https://twitter.com/あなたのXアカウント) - 最新情報や日常をポストしてるよ！
+* **Twitch:** [![Twitchのアイコンとか](ここにTwitchアイコン画像のURLとかあれば)](https://twitch.tv/あなたのTwitchチャンネル) [あなたのTwitchチャンネル](https://twitch.tv/あなたのTwitchチャンネル) - ゲーム配信メイン！コメントで盛り上げてね！
+* **YouTube:** [![YouTubeのアイコンとか](ここにYouTubeアイコン画像のURLとかあれば)](https://youtube.com/あなたのYouTubeチャンネル) [あなたのYouTubeチャンネル](https://youtube.com/あなたのYouTubeチャンネル) - 大会動画や解説動画をアップしてるかも！
+* **Discord:** `君のDiscord名#1234` (またはサーバー招待リンク！) - 一緒にゲームする仲間募集中！
+
+---
