@@ -18,7 +18,7 @@ date: 2025-05-29 # postレイアウトは日付も表示することが多いか
 3位以上になった大会を記録していきます。大会の規模は問いません。
 
 ###JCG
-* **JCG Shadowverse Open Farewell CUP アンリミテッド大会 3位
+* JCG Shadowverse Open Farewell CUP アンリミテッド大会 3位
 
 ###Tonamel
 * さんかく杯vol.22 準優勝
