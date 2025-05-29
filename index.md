@@ -98,7 +98,7 @@ date: 2025-05-29 # postレイアウトは日付も表示することが多いか
 色んなリンクの置き場です。
 
 <div class="social-links-container">
-  <a href="https://x.com/MeuropGG" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="X (旧Twitter) のプロフィールへ">
+  <a href="https://x.com/MeuropGG" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="X のプロフィールへ">
     <img src="https://pbs.twimg.com/profile_images/1652941656650559488/426V_CyM_400x400.jpg" alt="Xのアイコン" style="width:48px; height:48px; vertical-align:middle; margin-right:6px;">
     <span class="social-text">X</span>
   </a>
@@ -117,7 +117,7 @@ date: 2025-05-29 # postレイアウトは日付も表示することが多いか
   <br>
 
   <a href="https://vrchat.com/home/user/usr_a24e8f74-6037-4cd3-bae6-e58df9dbdd6c" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="VRChat のプロフィールへ">
-    <img src="https://pbs.twimg.com/media/GohEPu_WcAEYoIo?format=jpg&name=4096x4096" alt="VRChatのアイコン" style="width:48px; height:48px; vertical-align:middle; margin-right:6px;">
+    <img src="https://pbs.twimg.com/media/GsGVuBuaUAEltl-?format=jpg&name=large" alt="VRChatのアイコン" style="width:48px; height:48px; vertical-align:middle; margin-right:6px;">
     <span class="social-text">VRChat</span>
   </a>
   <br>
