@@ -12,6 +12,33 @@ date: 2025-05-29 # postレイアウトは日付も表示することが多いか
 日本語しか分かりません。プログラミング言語ってなんですか。
 
 ## ブログ
+---
+layout: default # ← 記事一覧を表示するページのレイアウトを指定 (Minimaテーマの `home` は元々記事一覧機能がある)
+title: ボクのブログ - 最新記事一覧！
+permalink: /blog/ # ← もし `blog.md` とかで専用ページ作るなら、URLをこうやって指定できる (トップページなら不要)
+---
+
+## ✨ 最新の記事一覧 ✨
+
+<ul class="post-list"> {% for post in site.posts %}
+    <li>
+      <h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title }}
+        </a>
+      </h3>
+      <span class="post-meta">{{ post.date | date: "%Y年%m月%d日" }}</span>
+      {% if post.categories.size > 0 %}
+        <span class="post-categories">
+          カテゴリー: {{ post.categories | join: ", " }}
+        </span>
+      {% endif %}
+      <p>{{ post.excerpt }}</p> {# post.excerpt で記事の最初の段落とかを抜粋表示できる！ #}
+    </li>
+  {% endfor %}
+</ul>
+
+<p>過去の記事も読んでみてね！</p>
 
 ## 🏆 Shadowverse大会実績 🏆
 
