@@ -6,18 +6,6 @@ date: 2025-05-29 # postレイアウトは日付も表示することが多いか
 # categories: [イベント, レポート] # カテゴリとかも設定できるかも！
 ---
 
-<style>
-.social-links-container {
-  display: flex;
-  /* ...さっきのCSSをここにコピペ... */
-}
-/* ...他のCSSも全部ここに... */
-</style>
-
-<div class="social-links-container">
-  ...
-</div>
-
 # メウロぷのページへようこそ
 # ツイフィ兼ポートフォリオ兼ブログ
 
