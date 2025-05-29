@@ -4,6 +4,8 @@ title: メウロぷのホームページ
 date: 2025-05-29 # postレイアウトは日付も表示することが多いから、書いとくとイイ感じ！
 # author
 # categories: [イベント, レポート] # カテゴリとかも設定できるかも！
+---
+
 <style>
 .social-links-container {
   display: flex;
@@ -15,7 +17,6 @@ date: 2025-05-29 # postレイアウトは日付も表示することが多いか
 <div class="social-links-container">
   ...
 </div>
----
 
 # メウロぷのページへようこそ
 # ツイフィ兼ポートフォリオ兼ブログ
