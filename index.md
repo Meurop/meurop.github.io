@@ -97,9 +97,9 @@ date: 2025-05-29 # postレイアウトは日付も表示することが多いか
 
 色んなリンクの置き場です。
 
-* **X:** [![Xのアイコンとか](https://pbs.twimg.com/profile_images/1652941656650559488/426V_CyM_400x400.jpg)](https://x.com/MeuropGG)
-* **Twitch:** [![Twitchのアイコンとか](https://static-cdn.jtvnw.net/jtv_user_pictures/f2a96e20-c68d-4ae5-b2f1-06f5d3e48e38-profile_image-300x300.png)](https://twitch.tv/meurop) [Twitch](https://www.twitch.tv/meurop)
-* **YouTube:** [![YouTubeのアイコンとか](https://yt3.googleusercontent.com/ytc/AIdro_lRztgQ1DASjKdf4yOb9aHj6JYfRIqI3A133L_mkt_qqg=s160-c-k-c0x00ffffff-no-rj)](https://youtube.com/@meurop)
-* **VRChat:** [![VRChatのアイコンとか](https://pbs.twimg.com/media/GohEPu_WcAEYoIo?format=jpg&name=4096x4096)](https://vrchat.com/home/user/usr_a24e8f74-6037-4cd3-bae6-e58df9dbdd6c)
+* **X:** [![Xのアイコン](https://pbs.twimg.com/profile_images/1652941656650559488/426V_CyM_400x400.jpg)](https://x.com/MeuropGG)
+* **Twitch:** [![Twitchのアイコン](https://static-cdn.jtvnw.net/jtv_user_pictures/f2a96e20-c68d-4ae5-b2f1-06f5d3e48e38-profile_image-300x300.png)](https://twitch.tv/meurop)
+* **YouTube:** [![YouTubeのアイコン](https://yt3.googleusercontent.com/ytc/AIdro_lRztgQ1DASjKdf4yOb9aHj6JYfRIqI3A133L_mkt_qqg=s160-c-k-c0x00ffffff-no-rj)](https://youtube.com/@meurop)
+* **VRChat:** [![VRChatのアイコン](https://pbs.twimg.com/media/GohEPu_WcAEYoIo?format=jpg&name=4096x4096)](https://vrchat.com/home/user/usr_a24e8f74-6037-4cd3-bae6-e58df9dbdd6c)
 
 ---
