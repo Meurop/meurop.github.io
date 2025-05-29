@@ -97,9 +97,9 @@ date: 2025-05-29 # postレイアウトは日付も表示することが多いか
 
 色んなリンクの置き場です。
 
-* **X:** [![Xのアイコンとか](https://x.com/MeuropGG/photo)] [@あなたのXアカウント](https://x.com/MeuropGG)
-* **Twitch:** [![Twitchのアイコンとか](ここにTwitchアイコン画像のURLとかあれば)](https://twitch.tv/あなたのTwitchチャンネル) [あなたのTwitchチャンネル](https://twitch.tv/あなたのTwitchチャンネル)
-* **YouTube:** [![YouTubeのアイコンとか](ここにYouTubeアイコン画像のURLとかあれば)](https://youtube.com/あなたのYouTubeチャンネル) [あなたのYouTubeチャンネル](https://youtube.com/あなたのYouTubeチャンネル)
-* **note:** `君のDiscord名#1234` (またはサーバー招待リンク！)
+* **X:** [![Xのアイコンとか](https://x.com/MeuropGG/photo)] [@X](https://x.com/MeuropGG)
+* **Twitch:** [![Twitchのアイコンとか](ここにTwitchアイコン画像のURLとかあれば)](https://twitch.tv/あなたのTwitchチャンネル) [Twitch](https://www.twitch.tv/meurop)
+* **YouTube:** [![YouTubeのアイコンとか](ここにYouTubeアイコン画像のURLとかあれば)](https://youtube.com/あなたのYouTubeチャンネル) [あなたのYouTubeチャンネル](https://www.youtube.com/@meurop)
+* **VRChat:** [VRChat](https://vrchat.com/home/user/usr_a24e8f74-6037-4cd3-bae6-e58df9dbdd6c)
 
 ---
