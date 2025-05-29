@@ -11,7 +11,7 @@ date: 2025-05-29 # postレイアウトは日付も表示することが多いか
 
 日本語しか分かりません。プログラミング言語ってなんですか。
 
-## ブログ (新着順)
+## 📜ブログ (新着順)📜
 
 <ul class="post-list"> {% for post in site.posts %}
     <li>
@@ -66,6 +66,8 @@ date: 2025-05-29 # postレイアウトは日付も表示することが多いか
 
 今までプレイしてきた色々なゲームの最高ランクを簡単に記録する場所です。
 
+<div class="cool-game-ranks-table">
+
 | ゲームタイトル     |   ランク    |
 |----------------|------------|
 | VALORANT       | D2 |
@@ -88,6 +90,8 @@ date: 2025-05-29 # postレイアウトは日付も表示することが多いか
 | Mecha BREAK    |  CHAMPION5 |
 | Warlander    |  ORICHALCUM |
 | Pokémon UNITE    | MASTER |
+
+</div>
 
 ## 🎮 つくったミニゲーム 🎮
 
