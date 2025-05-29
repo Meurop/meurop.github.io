@@ -97,9 +97,9 @@ date: 2025-05-29 # postレイアウトは日付も表示することが多いか
 
 色んなリンクの置き場です。
 
-* **X:** [![Xのアイコンとか](ここにXアイコン画像のURLとかあれば)](https://twitter.com/あなたのXアカウント) [@あなたのXアカウント](https://twitter.com/あなたのXアカウント) - 最新情報や日常をポストしてるよ！
-* **Twitch:** [![Twitchのアイコンとか](ここにTwitchアイコン画像のURLとかあれば)](https://twitch.tv/あなたのTwitchチャンネル) [あなたのTwitchチャンネル](https://twitch.tv/あなたのTwitchチャンネル) - ゲーム配信メイン！コメントで盛り上げてね！
-* **YouTube:** [![YouTubeのアイコンとか](ここにYouTubeアイコン画像のURLとかあれば)](https://youtube.com/あなたのYouTubeチャンネル) [あなたのYouTubeチャンネル](https://youtube.com/あなたのYouTubeチャンネル) - 大会動画や解説動画をアップしてるかも！
-* **note:** `君のDiscord名#1234` (またはサーバー招待リンク！) - 一緒にゲームする仲間募集中！
+* **X:** [![Xのアイコンとか](https://x.com/MeuropGG/photo)](https://x.com/MeuropGG) [@あなたのXアカウント](https://twitter.com/あなたのXアカウント)
+* **Twitch:** [![Twitchのアイコンとか](ここにTwitchアイコン画像のURLとかあれば)](https://twitch.tv/あなたのTwitchチャンネル) [あなたのTwitchチャンネル](https://twitch.tv/あなたのTwitchチャンネル)
+* **YouTube:** [![YouTubeのアイコンとか](ここにYouTubeアイコン画像のURLとかあれば)](https://youtube.com/あなたのYouTubeチャンネル) [あなたのYouTubeチャンネル](https://youtube.com/あなたのYouTubeチャンネル)
+* **note:** `君のDiscord名#1234` (またはサーバー招待リンク！)
 
 ---
