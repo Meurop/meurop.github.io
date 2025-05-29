@@ -99,25 +99,25 @@ date: 2025-05-29 # postレイアウトは日付も表示することが多いか
 
 <div class="social-links-container">
   <a href="https://x.com/MeuropGG" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="X (旧Twitter) のプロフィールへ">
-    <img src="https://pbs.twimg.com/profile_images/1652941656650559488/426V_CyM_400x400.jpg" alt="Xのアイコン" style="width:24px; height:24px; vertical-align:middle; margin-right:6px;">
+    <img src="https://pbs.twimg.com/profile_images/1652941656650559488/426V_CyM_400x400.jpg" alt="Xのアイコン" style="width:48px; height:48px; vertical-align:middle; margin-right:6px;">
     <span class="social-text">X</span>
   </a>
   <br>
 
   <a href="https://twitch.tv/meurop" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitch のチャンネルへ">
-    <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/f2a96e20-c68d-4ae5-b2f1-06f5d3e48e38-profile_image-300x300.png" alt="Twitchのアイコン" style="width:24px; height:24px; vertical-align:middle; margin-right:6px;">
+    <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/f2a96e20-c68d-4ae5-b2f1-06f5d3e48e38-profile_image-300x300.png" alt="Twitchのアイコン" style="width:48px; height:48px; vertical-align:middle; margin-right:6px;">
     <span class="social-text">Twitch</span>
   </a>
   <br>
 
   <a href="https://youtube.com/@meurop" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube のチャンネルへ">
-    <img src="https://yt3.googleusercontent.com/ytc/AIdro_lRztgQ1DASjKdf4yOb9aHj6JYfRIqI3A133L_mkt_qqg=s160-c-k-c0x00ffffff-no-rj" alt="YouTubeのアイコン" style="width:24px; height:24px; vertical-align:middle; margin-right:6px;">
+    <img src="https://yt3.googleusercontent.com/ytc/AIdro_lRztgQ1DASjKdf4yOb9aHj6JYfRIqI3A133L_mkt_qqg=s160-c-k-c0x00ffffff-no-rj" alt="YouTubeのアイコン" style="width:48px; height:48px; vertical-align:middle; margin-right:6px;">
     <span class="social-text">YouTube</span>
   </a>
   <br>
 
   <a href="https://vrchat.com/home/user/usr_a24e8f74-6037-4cd3-bae6-e58df9dbdd6c" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="VRChat のプロフィールへ">
-    <img src="https://pbs.twimg.com/media/GohEPu_WcAEYoIo?format=jpg&name=4096x4096" alt="VRChatのアイコン" style="width:24px; height:24px; vertical-align:middle; margin-right:6px;">
+    <img src="https://pbs.twimg.com/media/GohEPu_WcAEYoIo?format=jpg&name=4096x4096" alt="VRChatのアイコン" style="width:48px; height:48px; vertical-align:middle; margin-right:6px;">
     <span class="social-text">VRChat</span>
   </a>
   <br>
