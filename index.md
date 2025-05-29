@@ -102,7 +102,7 @@ date: 2025-05-29 # postレイアウトは日付も表示することが多いか
     <img src="https://pbs.twimg.com/profile_images/1652941656650559488/426V_CyM_400x400.jpg" alt="Xのアイコン" style="width:24px; height:24px; vertical-align:middle; margin-right:6px;">
     <span class="social-text">X</span>
   </a>
-  <br> {/
+  <br>
 
   <a href="https://twitch.tv/meurop" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitch のチャンネルへ">
     <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/f2a96e20-c68d-4ae5-b2f1-06f5d3e48e38-profile_image-300x300.png" alt="Twitchのアイコン" style="width:24px; height:24px; vertical-align:middle; margin-right:6px;">
