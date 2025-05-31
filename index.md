@@ -78,7 +78,7 @@ date: 2025-05-29 # postレイアウトは日付も表示することが多いか
 | Yu-Gi-Oh! Master Duel    | P5 |
 | DUEL MASTERS PLAY'S    | P3 |
 | Pokémon Trading Card Game Pocket    | MASTER |
-| NIJICA    | None |
+| NIJICA    | MASTER |
 | Poker Chase    |  DIAMOND |
 | Mahjong Soul    |  雀傑 |
 | Mahjong Fight Girls    |  初段 |
