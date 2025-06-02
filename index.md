@@ -94,6 +94,8 @@ date: 2025-05-29 # postレイアウトは日付も表示することが多いか
 メウロぷがGeminiちゃんと一緒につくったゲームたちです。
 * しいたけタワー！
 https://meurop.github.io/pen-export-vEOOeNa/dist/
+* スイカ斬りゲーム！
+https://meurop.github.io/pen-export-qEddxrx/dist/
 
 ## 🔗 リンク一覧 🔗
 
