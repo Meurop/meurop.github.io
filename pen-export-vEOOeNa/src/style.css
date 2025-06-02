@@ -1,0 +1,76 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #f0f8ff; /* CodePenのプレビュー背景もこれで変わるはず！ */
+}
+
+h1 {
+    color: #ff69b4;
+}
+
+#gameCanvas {
+    border: 3px solid hotpink;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.controls {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#dropButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffb6c1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px lightgray;
+}
+
+#dropButton:hover {
+    background-color: #ff7f9e;
+}
+
+#dropButton:active {
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
+#resetButton {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px lightgray;
+    margin-left: 10px;
+}
+
+#resetButton:hover {
+    background-color: #45a049;
+}
+
+#resetButton:active {
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
+#scoreDisplay {
+    font-weight: bold;
+    color: #ff69b4;
+}
+
+.game-over-hidden {
+    display: none;
+    font-size: 24px;
+    color: red;
+    font-weight: bold;
+}

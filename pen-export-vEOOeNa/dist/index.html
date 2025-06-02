@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>しいたけタワー！</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://cdn.jsdelivr.net/npm/matter-js@0.19.0/build/matter.min.js"></script>
+
+<h1>しいたけタワー！</h1>
+
+<canvas id="gameCanvas"></canvas>
+
+<div class="controls">
+    <button id="dropButton">しいたけ落とす！</button>
+    <button id="resetButton">リセット！</button>
+    <p>スコア: <span id="scoreDisplay">0</span></p>
+</div>
+
+<p id="gameOverText" class="game-over-hidden">ゲームオーバー！</p>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
