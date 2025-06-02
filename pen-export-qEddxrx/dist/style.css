@@ -1,0 +1,129 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* 冒険の書物に似合うフォント */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 95vh;
+  background-color: #faf0e6; /* 古代の羊皮紙のような色 */
+  margin: 0;
+  padding: 15px;
+  box-sizing: border-box;
+  color: #4a4a4a; /* 落ち着いたインクの色 */
+}
+
+h1 {
+  color: #8b4513; /* 古木の幹のような茶色 */
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  font-size: 2.2em; /* 少し大きめのタイトルで力強く！ */
+}
+
+#game-world {
+  width: 90%;
+  max-width: 650px;
+  height: 350px;
+  border: 5px ridge #cd853f; /* 立派な額縁のような枠 (ペルー色) */
+  background-color: #f5f5dc; /* 古びた地図のような背景色 (ベージュ) */
+  position: relative;
+  margin-bottom: 25px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+#wooden-stick { /* 勇者の剣！ */
+  width: 12px;
+  height: 80px;
+  background: linear-gradient(to right, #c0c0c0, #f8f8f8, #c0c0c0);
+  border: 1px solid #708090;
+  border-radius: 4px 4px 1px 1px;
+  position: absolute;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+#wooden-stick::before { /* 鍔（つば） */
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 10px;
+  background: linear-gradient(to bottom, #daa520, #ffd700, #daa520);
+  border: 1px solid #b8860b;
+  border-radius: 3px;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+#wooden-stick::after { /* 柄（つか） */
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 30px;
+  background: #654321;
+  border: 1px solid #3e2723;
+  border-radius: 0 0 4px 4px;
+  top: 84px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+#suika {
+  width: 55px;
+  height: 55px;
+  background-color: #66CDAA;
+  border: 3px solid #2E8B57;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #fff8dc;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+  overflow: hidden;
+  font-family: 'Arial Black', Gadget, sans-serif;
+}
+
+#suika .face {
+  white-space: nowrap;
+  user-select: none;
+}
+
+button#hit-button {
+  background: linear-gradient(145deg, #ff7e5f, #feb47b);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1.1em;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button#hit-button:hover {
+  background: linear-gradient(145deg, #feb47b, #ff7e5f);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.25);
+}
+
+button#hit-button:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+#message-area {
+  margin-top: 20px;
+  font-size: 1.25em;
+  color: #704214;
+  min-height: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
