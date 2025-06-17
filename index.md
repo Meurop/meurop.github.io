@@ -5,10 +5,9 @@ title: メウロぷのホームページ
 # categories: [イベント, レポート]
 ---
 
-# メウロぷのページへようこそ
-# ツイフィ兼ポートフォリオ兼ブログ
+# メウロぷのポートフォリオ
 
-## 📜ブログ (新着順)📜
+## 📜雑記📜
 
 <ul class="post-list"> {% for post in site.posts %}
     <li>
@@ -35,7 +34,7 @@ title: メウロぷのホームページ
 JCG
 * JCG Shadowverse Open Farewell CUP アンリミテッド大会 3位
 
-Tonamel
+Tonamel 🥇×5 🥈×7 🥉×12
 * さんかく杯vol.22 準優勝
 * WAYBS SV Open: WaybsCup vol.120 3位
 * 第47回YeSUカップオンラインES大会 優勝
