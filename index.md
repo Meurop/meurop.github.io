@@ -63,6 +63,7 @@ SUL、SCL、LOSなどにも一応出ていた気がする…
 
 ## ⚔ ShadowverseWB大会実績 ⚔
 * 【シャドバWB大会】Wisdom #1 優勝
+* 1Day Championship #2【Bo1トーナメント】3位
 
 ## 🛡️ ランクマッチ記録 🛡️
 
