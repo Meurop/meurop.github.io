@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Face Stack — 積み顔ゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Face Stack</h1>
+    <p>可愛い顔を積み上げて、崩れる前にたくさん積もう！PNGは作者（あなた）が用意したものを使います。</p>
+  </header>
+
+  <main>
+    <section id="controls">
+      <div class="left">
+  <button id="startBtn" disabled>スタート</button>
+        <button id="resetBtn">リセット</button>
+        <label>次の顔をランダムに: <input type="checkbox" id="randomFaces" checked></label>
+      </div>
+      <div class="right">
+        <div>現在スコア: <span id="score">0</span></div>
+        <div>ベスト: <span id="best">0</span></div>
+        <div id="status" class="status">読み込み中...</div>
+        <div>操作: ← → で位置調整 / スペースで落下</div>
+      </div>
+    </section>
+
+    <div id="gamewrap">
+      <canvas id="game"></canvas>
+    </div>
+
+    <section id="notes">
+      <h3>注意</h3>
+      <p>ゲームで使う顔画像は <code>/faces/list.json</code> に指定してください。PNGで顔がトリミングされたものを推奨します（背景透過）。</p>
+    </section>
+  </main>
+
+  <footer>
+    <small>HTML5 / Canvas サンプル — GitHub Pages にそのまま置けます</small>
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
