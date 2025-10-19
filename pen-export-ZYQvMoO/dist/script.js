@@ -14,7 +14,7 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 const gameOverText = document.getElementById('gameOverText');
 const resetButton = document.getElementById('resetButton');
 
-let isDebugMode = true;
+let isDebugMode = false;
 
 canvas.width = 300;
 canvas.height = 500;
