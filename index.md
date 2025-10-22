@@ -99,7 +99,7 @@ SUL、SCL、LOSなどにも一応出ていた気がする…
 
 ## 🎮 つくったミニゲーム 🎮
 
-メウロぷがGeminiちゃんと一緒につくったゲームたちです。
+メウロぷがGeminiちゃんやDeepSeekちゃんと一緒につくったゲームたちです。
 * [しいたけタワー！](https://meurop.github.io/pen-export-vEOOeNa/dist/)
 * [スイカ斬りゲーム！](https://meurop.github.io/pen-export-qEddxrx/dist/)
 * [ノナタワー！](https://meurop.github.io/pen-export-ZYQvMoO/dist/)
@@ -134,5 +134,6 @@ SUL、SCL、LOSなどにも一応出ていた気がする…
   <br>
   </div>
 ---
+
 
 
