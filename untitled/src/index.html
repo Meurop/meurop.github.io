@@ -1,0 +1,30 @@
+<script src="https://cdn.jsdelivr.net/npm/matter-js@0.19.0/build/matter.min.js"></script>
+
+<h1>にゃんこ弾幕サバイバル！</h1>
+
+<div id="gameContainer">
+    <canvas id="gameCanvas"></canvas>
+    <div id="uiContainer">
+        <div class="scoreArea">
+            <p>スコア (生存時間): <span id="scoreDisplay">0.00</span> 秒</p>
+            <button id="resetButton">リセット！</button>
+            <button id="startButton">スタート！</button> </div>
+        <div id="highScoreArea">
+            <h2>ハイスコア トップ10</h2>
+            <ol id="highScoreList">
+                <li>まだスコアがありません</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<p id="gameOverText" class="game-over-hidden">ゲームオーバー！</p>
+
+<div id="mobileControls" class="mobile-hidden">
+    <button id="btnUp">↑</button>
+    <div>
+        <button id="btnLeft">←</button>
+        <button id="btnDown">↓</button>
+        <button id="btnRight">→</button>
+    </div>
+</div>
