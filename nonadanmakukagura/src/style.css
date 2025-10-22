@@ -1,0 +1,182 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f8ff;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #ff69b4;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#gameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 800px;
+}
+
+#gameCanvas {
+    border: 3px solid #6495ed;
+    background-color: #fff;
+    cursor: none;
+    display: block;
+}
+
+#uiContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 200px;
+}
+
+.scoreArea {
+    text-align: center;
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#scoreDisplay {
+    font-weight: bold;
+    color: #e65100;
+    font-size: 1.4em;
+    display: block;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px lightgray;
+    margin: 5px;
+    width: 120px;
+}
+button:hover { filter: brightness(90%); }
+button:active { box-shadow: none; transform: translateY(1px); }
+
+#resetButton { background-color: #f44336; }
+#startButton { background-color: #4CAF50; }
+
+#highScoreArea {
+    width: 100%;
+    background-color: #fff;
+    border: 2px solid #6495ed;
+    padding: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#highScoreArea h2 {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+#highScoreList {
+    padding-left: 20px;
+    margin: 0;
+    font-size: 0.95em;
+    color: #555;
+}
+#highScoreList li { 
+    margin-bottom: 8px;
+    padding: 3px 0;
+}
+
+.game-over-hidden {
+    display: none;
+    font-size: 24px;
+    font-weight: bold;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 100;
+    text-align: center;
+}
+
+/* --- スマホ用ボタン --- */
+#mobileControls {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 0;
+    position: relative;
+    left: -122px; /* 左に60pxずらす */
+}
+
+#mobileControls button {
+    width: 80px;
+    height: 60px;
+    font-size: 28px;
+    background-color: #4CAF50;
+    border-radius: 10px;
+}
+
+/* 画面幅が小さい時は縦積み */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    #gameContainer { 
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px;
+    }
+    
+    #uiContainer {
+        width: 300px;
+        order: -1;
+    }
+    
+ 
+    #mobileControls button {
+        width: 100px;
+        height: 80px;
+        font-size: 32px;
+    }
+}
+
+/* 画面幅が非常に小さい場合 */
+@media (max-width: 480px) {
+    #gameContainer {
+        width: 100%;
+    }
+    
+    #gameCanvas {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+    
+    #uiContainer {
+        width: 100%;
+        max-width: 300px;
+    }
+}
