@@ -100,7 +100,7 @@ Tonamel 🥇×2 🥈×2 🥉×3
 | Mahjong Soul    |  雀傑 |
 | Mahjong Fight Girls    |  初段 |
 | STREET FIGHTER 6    |  MASTER |
-| 2XKO    |  EMERALD |
+| 2XKO    |  EMERALD1 |
 | ELDEN RING    | 最高ランク |
 | ARMORED CORE VI FIRES OF RUBICON    | S |
 | Mecha BREAK    |  CHAMPION5 |
@@ -168,6 +168,7 @@ Tonamel 🥇×2 🥈×2 🥉×3
   <br>
   </div>
 ---
+
 
 
 
