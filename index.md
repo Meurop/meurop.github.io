@@ -1,11 +1,11 @@
 ---
 layout: page
-title: メウロぷのホームページ
+title: メウロぷのポートフォリオ
 # author
 # categories: [イベント, レポート]
 ---
 
-# メウロぷのポートフォリオ
+# ポートフォリオ
 
 ## 📜雑記📜
 
@@ -29,7 +29,7 @@ title: メウロぷのホームページ
 
 ## 🏆 Shadowverse大会実績 🏆
 
-3位以上になった大会を記録していきます。大会の規模は問いません。
+3位以上になった大会を記録していきます。大会の規模は問いません
 
 JCG
 * JCG Shadowverse Open Farewell CUP アンリミテッド大会 3位
@@ -59,9 +59,14 @@ Tonamel 🥇×5 🥈×7 🥉×12
 * アンリミテッドBO3しむ杯 第9回 3位
 * 第32回 アンリミBO3 ヨシハラ杯 3位
 
-SUL、SCL、LOSなどにも一応出ていた気がする…
+SUL
+* 23-24 1st Season プレイオフ進出
+* 23-24 2nd Season プレイオフ進出
+
+SCL、LOSなどにも一応参加していました
 
 ## ⚔ ShadowverseWB大会実績 ⚔
+Tonamel 🥇×2 🥈×2 🥉×3
 * 【シャドバWB大会】Wisdom #1 優勝
 * 1Day Championship #2【Bo1トーナメント】3位
 * 1Day Championship #3【Bo1トーナメント】優勝
@@ -72,7 +77,7 @@ SUL、SCL、LOSなどにも一応出ていた気がする…
 
 ## 🛡️ ランクマッチ記録 🛡️
 
-今までプレイしてきた色々なゲームの最高ランクを簡単に記録する場所です。
+今までプレイしてきた色々なゲームの最高到達ランクを記録する場所です
 
 | ゲームタイトル     |   ランク    |
 |----------------|------------|
@@ -83,6 +88,7 @@ SUL、SCL、LOSなどにも一応出ていた気がする…
 | Overwatch2    |  G1 |
 | Marvel Rivals    |  P1 |
 | Shadowverse    |  GM0 |
+| ShadowverseWB    |  ULTIMATE |
 | Yu-Gi-Oh! Master Duel    | P5 |
 | DUEL MASTERS PLAY'S    | P3 |
 | Pokémon Trading Card Game Pocket    | MASTER |
@@ -91,11 +97,13 @@ SUL、SCL、LOSなどにも一応出ていた気がする…
 | Mahjong Soul    |  雀傑 |
 | Mahjong Fight Girls    |  初段 |
 | STREET FIGHTER 6    |  MASTER |
+| 2XKO    |  EMERALD |
 | ELDEN RING    | 最高ランク |
 | ARMORED CORE VI FIRES OF RUBICON    | S |
 | Mecha BREAK    |  CHAMPION5 |
 | Warlander    |  ORICHALCUM |
 | Pokémon UNITE    | MASTER |
+| League of Legends    | NONE |
 
 ## 🎮 つくったミニゲーム 🎮
 
@@ -151,6 +159,7 @@ SUL、SCL、LOSなどにも一応出ていた気がする…
   <br>
   </div>
 ---
+
 
 
 
