@@ -34,6 +34,7 @@ title: メウロぷのポートフォリオ
 JCG
 * JCG Shadowverse Open Farewell CUP アンリミテッド大会 3位
 
+
 Tonamel 🥇×5 🥈×7 🥉×12
 * さんかく杯vol.22 準優勝
 * WAYBS SV Open: WaybsCup vol.120 3位
@@ -59,9 +60,11 @@ Tonamel 🥇×5 🥈×7 🥉×12
 * アンリミテッドBO3しむ杯 第9回 3位
 * 第32回 アンリミBO3 ヨシハラ杯 3位
 
+
 SUL
 * 23-24 1st Season プレイオフ進出
 * 23-24 2nd Season プレイオフ進出
+
 
 SCL、LOSなどにも一応参加していました
 
@@ -157,8 +160,15 @@ Tonamel 🥇×2 🥈×2 🥉×3
     <span class="social-text">VRChat</span>
   </a>
   <br>
+
+  <a href="https://resonet.app/players/0198101b-6bc8-70ff-947e-bd6029ecee2e?platform=vr" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Resonet. のプロフィールへ">
+    <img src="https://pbs.twimg.com/media/GxCwwn1aoAAZweq?format=jpg&name=4096x4096" alt="Resonet.のアイコン" style="width:48px; height:48px; vertical-align:middle; margin-right:6px;">
+    <span class="social-text">VRChat</span>
+  </a>
+  <br>
   </div>
 ---
+
 
 
 
