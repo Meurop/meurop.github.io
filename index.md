@@ -162,12 +162,13 @@ Tonamel 🥇×2 🥈×2 🥉×3
   <br>
 
   <a href="https://resonet.app/players/0198101b-6bc8-70ff-947e-bd6029ecee2e?platform=vr" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Resonet. のプロフィールへ">
-    <img src="https://pbs.twimg.com/media/GxCwwn1aoAAZweq?format=jpg&name=4096x4096" alt="Resonet.のアイコン" style="width:48px; height:48px; vertical-align:middle; margin-right:6px;">
-    <span class="social-text">VRChat</span>
+    <img src="https://drive.google.com/file/d/167qg7Q9F9z58opcjzuNi7FjdT4A-92kI/view?usp=sharing" alt="Resonet.のアイコン" style="width:48px; height:48px; vertical-align:middle; margin-right:6px;">
+    <span class="social-text">Resonet.</span>
   </a>
   <br>
   </div>
 ---
+
 
 
 
