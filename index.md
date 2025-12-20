@@ -69,7 +69,7 @@ SUL
 SCL、LOSなどにも一応参加していました
 
 ## ⚔ ShadowverseWB大会実績 ⚔
-Tonamel 🥇×2 🥈×2 🥉×3
+Tonamel 🥇×2 🥈×2 🥉×4
 * 【シャドバWB大会】Wisdom #1 優勝
 * 1Day Championship #2【Bo1トーナメント】3位
 * 1Day Championship #3【Bo1トーナメント】優勝
@@ -77,6 +77,7 @@ Tonamel 🥇×2 🥈×2 🥉×3
 * NEOのイベント#1 シャドバ 3位
 * 名無CS#1 2位
 * 1Day Championship #10【Bo1トーナメント】 2位
+* 第7回SSUシャドバサークル杯 3位
 
 ## 🛡️ ランクマッチ記録 🛡️
 
@@ -168,6 +169,7 @@ Tonamel 🥇×2 🥈×2 🥉×3
   <br>
   </div>
 ---
+
 
 
 
