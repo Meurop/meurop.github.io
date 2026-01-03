@@ -100,7 +100,7 @@ Tonamel 🥇×2 🥈×2 🥉×4
 | Poker Chase    |  DIAMOND |
 | Mahjong Soul    |  雀傑 |
 | Mahjong Fight Girls    |  初段 |
-| STREET FIGHTER 6    |  MASTER |
+| STREET FIGHTER 6    |  HIGH MASTER |
 | 2XKO    |  EMERALD1 |
 | ELDEN RING    | 最高ランク |
 | ARMORED CORE VI FIRES OF RUBICON    | S |
@@ -169,6 +169,7 @@ Tonamel 🥇×2 🥈×2 🥉×4
   <br>
   </div>
 ---
+
 
 
 
