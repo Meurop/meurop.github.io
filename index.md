@@ -109,13 +109,37 @@ Tonamel 🥇×2 🥈×2 🥉×4
 | Pokémon UNITE    | MASTER |
 | League of Legends    | NONE |
 
-## 🎮 つくったミニゲーム 🎮
+## 🎮 ゲーム・オブ・ザ・人生 🎮
 
-メウロぷがGeminiちゃんやDeepSeekちゃんと一緒につくったゲームたちです。
-* [しいたけタワー！](https://meurop.github.io/pen-export-vEOOeNa/dist/)
-* [スイカ斬りゲーム！](https://meurop.github.io/pen-export-qEddxrx/dist/)
-* [ノナタワー！](https://meurop.github.io/pen-export-ZYQvMoO/dist/)
-* [ノナダンマクカグラ！(PC推奨)](https://meurop.github.io/nonadanmakukagura/dist/)
+物心ついた頃からゲーマーだったメウロぷの人生に多大な影響を与えたゲームです
+* Sekiro™: Shadows Die Twice
+* ELDEN RING
+* ARMORED CORE™ VI FIRES OF RUBICON™
+* DARK SOULS™ III
+* Monster Hunter World
+* NieR:Automata™
+* ソードアート・オンライン -ホロウ・リアリゼーション-
+* Palworld / パルワールド
+* ゼルダの伝説 ブレス オブ ザ ワイルド
+* ドラゴンクエストIX 星空の守り人
+* とびだせ どうぶつの森
+* ぷよぷよ! Puyopuyo 15th anniversary
+* パズル＆ドラゴンズ
+* セブンス・リバース
+* Apex Legends
+* VALORANT
+* Shadowverse
+* Shadowverse: Worlds Beyond
+* バディファイト
+* STREET FIGHTER 6
+* ファンタシースターオンライン2
+* 黒い砂漠
+* 原神
+* BLUE PROTOCOL
+* VRChat
+* CHUNITHM
+* Rotaeno
+* RESONARK 4 ELVES Pt.1/Pt.2
 
 ## 📛 保有資格 📛
 * 漢検2級
@@ -132,6 +156,47 @@ Tonamel 🥇×2 🥈×2 🥉×4
 * くるまマイスター検定1級
 * 七転び八起き検定 3級
 * ホームユースうつわマスター
+
+## 🖋 ゲーム以外の活動 🖋
+* 新極真空手(9年)
+* ソフトテニス(3年)
+* 陸上
+* 書道(毛筆二段、硬筆準二段)
+* 自作キーボード
+* 同人活動(エッセイ、詩、小説)⇒文学フリマやNEOKETに出店・出展したり、公募で入賞したりしていました
+* ラーメン巡り(年間200杯ぐらい)
+* などなど
+
+## 🍜 ラーメン・オブ・ザ・人生 🍜
+
+ジャンル毎の私的TOPラーメンです
+
+| ジャンル     |   店名    |
+|----------------|------------|
+| 醤油       | Homemade Ramen 麦苗 |
+| 塩   |  飯田商店     |
+| 味噌   |  三ん寅 |
+| 豚骨(家系以外)    |  博多ラーメン 和 |
+| 家系    |  神田ラーメン わいず |
+| MIX    |  はりけんラーメン 本店 |
+| 淡麗煮干    |  中華そば うお静 |
+| 濃厚煮干    |  中華そば 西川 |
+| 鶏白湯    | らぁ麺 松しん |
+| つけ麺清湯    | 麵屋鈴春 |
+| つけ麺濃厚    |  中華そば とみ田 |
+| 汁なし    |  手打麺祭 かめ囲 |
+| 個人賞⓵    |  宍道湖しじみ中華蕎麦 琥珀 東京本店 |
+| 個人賞⓶    |  NIBOSHIMANIA |
+| 個人賞⓷    | NATURAL TASTE |
+| 個人賞⓸    | 領寿庵 |
+
+## 👾 つくったミニゲーム 👾
+
+メウロぷがGeminiちゃんやDeepSeekちゃんと一緒につくったゲームたちです。
+* [しいたけタワー！](https://meurop.github.io/pen-export-vEOOeNa/dist/)
+* [スイカ斬りゲーム！](https://meurop.github.io/pen-export-qEddxrx/dist/)
+* [ノナタワー！](https://meurop.github.io/pen-export-ZYQvMoO/dist/)
+* [ノナダンマクカグラ！(PC推奨)](https://meurop.github.io/nonadanmakukagura/dist/)
 
 ## 🔗 リンク一覧 🔗
 
@@ -169,6 +234,7 @@ Tonamel 🥇×2 🥈×2 🥉×4
   <br>
   </div>
 ---
+
 
 
 
