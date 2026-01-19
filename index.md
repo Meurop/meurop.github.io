@@ -109,38 +109,6 @@ Tonamel 🥇×2 🥈×2 🥉×4
 | Pokémon UNITE    | MASTER |
 | League of Legends    | NONE |
 
-## 🎮 ゲーム・オブ・ザ・人生 🎮
-
-物心ついた頃からゲーマーだったメウロぷの人生に多大な影響を与えたゲームです
-* Sekiro™: Shadows Die Twice
-* ELDEN RING
-* ARMORED CORE™ VI FIRES OF RUBICON™
-* DARK SOULS™ III
-* Monster Hunter World
-* NieR:Automata™
-* ソードアート・オンライン -ホロウ・リアリゼーション-
-* Palworld / パルワールド
-* ゼルダの伝説 ブレス オブ ザ ワイルド
-* ドラゴンクエストIX 星空の守り人
-* とびだせ どうぶつの森
-* ぷよぷよ! Puyopuyo 15th anniversary
-* パズル＆ドラゴンズ
-* セブンス・リバース
-* Apex Legends
-* VALORANT
-* Shadowverse
-* Shadowverse: Worlds Beyond
-* バディファイト
-* STREET FIGHTER 6
-* ファンタシースターオンライン2
-* 黒い砂漠
-* 原神
-* BLUE PROTOCOL
-* VRChat
-* CHUNITHM
-* Rotaeno
-* RESONARK 4 ELVES Pt.1/Pt.2
-
 ## 📛 保有資格 📛
 * 漢検2級
 * 英検準2級
@@ -157,15 +125,10 @@ Tonamel 🥇×2 🥈×2 🥉×4
 * 七転び八起き検定 3級
 * ホームユースうつわマスター
 
-## 🖋 ゲーム以外の活動 🖋
-* 新極真空手(9年してた)
-* ソフトテニス(3年してた)
-* 陸上(よく覚えてない)
-* 書道(毛筆二段、硬筆準二段)
+## 🖋 ゲーム以外の趣味 🖋
 * 自作キーボード
 * 同人活動(エッセイ、詩、小説)⇒文学フリマやNEOKETに出店・出展したり、詩の公募で入賞したりしていました
 * ラーメン巡り(年間200杯ぐらい)
-* などなど
 
 ## 👾 つくったミニゲーム 👾
 
@@ -211,6 +174,7 @@ Tonamel 🥇×2 🥈×2 🥉×4
   <br>
   </div>
 ---
+
 
 
 
