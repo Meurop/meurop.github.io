@@ -172,8 +172,15 @@ Tonamel 🥇×2 🥈×2 🥉×4
     <span class="social-text">Resonet.</span>
   </a>
   <br>
+
+  <a href="https://note.com/meuropgg" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="note のプロフィールへ">
+    <img src="https://i.imgur.com/ZOyhKF9.png" alt="noteのアイコン" style="width:48px; height:48px; vertical-align:middle; margin-right:6px;">
+    <span class="social-text">note</span>
+  </a>
+  <br>
   </div>
 ---
+
 
 
 
