@@ -98,6 +98,7 @@ Tonamel 🥇×2 🥈×2 🥉×4
 | Pokémon Trading Card Game Pocket    | MASTER |
 | NIJICA    | MASTER |
 | Poker Chase    |  DIAMOND |
+| m HOLD’EM    |  プロリーグ |
 | Mahjong Soul    |  雀傑 |
 | Mahjong Fight Girls    |  初段 |
 | STREET FIGHTER 6    |  HIGH MASTER |
@@ -180,6 +181,7 @@ Tonamel 🥇×2 🥈×2 🥉×4
   <br>
   </div>
 ---
+
 
 
 
