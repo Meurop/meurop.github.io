@@ -100,7 +100,7 @@ Tonamel 🥇×2 🥈×2 🥉×4
 | Poker Chase    |  DIAMOND |
 | m HOLD’EM    |  プロリーグ |
 | Mahjong Soul    |  雀傑 |
-| Mahjong Fight Girls    |  初段 |
+| Mahjong Fight Girls    |  八段 |
 | STREET FIGHTER 6    |  HIGH MASTER |
 | 2XKO    |  EMERALD1 |
 | ELDEN RING    | 最高ランク |
@@ -109,6 +109,7 @@ Tonamel 🥇×2 🥈×2 🥉×4
 | Warlander    |  ORICHALCUM |
 | Pokémon UNITE    | MASTER |
 | League of Legends    | NONE |
+| Pokémon Champions    | Master Ball Tier |
 
 ## 📛 保有資格 📛
 * 漢検2級
