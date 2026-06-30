@@ -99,8 +99,8 @@ Tonamel 🥇×2 🥈×2 🥉×4
 | NIJICA    | MASTER |
 | Poker Chase    |  DIAMOND |
 | m HOLD’EM    |  プロリーグ |
+| Mahjong Fight Girls    |  九段 |
 | Mahjong Soul    |  雀傑 |
-| Mahjong Fight Girls    |  八段 |
 | STREET FIGHTER 6    |  HIGH MASTER |
 | 2XKO    |  EMERALD1 |
 | ELDEN RING    | 最高ランク |
