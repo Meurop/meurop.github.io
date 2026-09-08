@@ -134,12 +134,12 @@ Tonamel 🥇×2 🥈×2 🥉×4
 
 ## 👾 つくったミニゲーム 👾
 
-メウロぷがGeminiちゃんやDeepSeekちゃんと一緒につくったゲームたちです。
+メウロぷがAIちゃんと一緒につくったゲームたちです。
 * [しいたけタワー！](https://meurop.github.io/pen-export-vEOOeNa/dist/)
 * [スイカ斬りゲーム！](https://meurop.github.io/pen-export-qEddxrx/dist/)
 * [ノナタワー！](https://meurop.github.io/pen-export-ZYQvMoO/dist/)
 * [ノナダンマクカグラ！(PC推奨)](https://meurop.github.io/nonadanmakukagura/dist/)
-* [ノナタワー！](https://meurop.github.io/legendofnona/dist/)
+* [ノナ伝説](https://meurop.github.io/legendofnona/dist/)
 
 ## 🔗 リンク一覧 🔗
 
