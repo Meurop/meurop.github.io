@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ノナ伝説</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', system-ui, sans-serif;
+            background: linear-gradient(145deg, #1a0b1f 0%, #2d1b33 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .game-container {
+            max-width: 700px;
+            width: 100%;
+            background: rgba(40, 25, 50, 0.85);
+            backdrop-filter: blur(4px);
+            border-radius: 48px;
+            padding: 30px 28px 38px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(200, 130, 255, 0.2);
+            border: 1px solid rgba(200, 130, 255, 0.15);
+            transition: all 0.2s;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(200, 130, 255, 0.25);
+            padding-bottom: 14px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .title {
+            font-size: 2.1rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f9e3b6, #ffb7e6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(255, 180, 240, 0.25);
+            letter-spacing: 2px;
+        }
+
+        .title small {
+            font-size: 0.9rem;
+            font-weight: 400;
+            -webkit-text-fill-color: rgba(255, 255, 255, 0.5);
+            background: none;
+            margin-left: 8px;
+        }
+
+        .level-badge {
+            background: rgba(255, 200, 100, 0.15);
+            border: 1px solid rgba(255, 200, 100, 0.3);
+            border-radius: 40px;
+            padding: 6px 18px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #f9e3b6;
+            backdrop-filter: blur(2px);
+            white-space: nowrap;
+        }
+
+        .resource-area {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 30px;
+            padding: 18px 24px;
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            border: 1px solid rgba(200, 130, 255, 0.15);
+            box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .resource-main {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+        }
+
+        .resource-icon {
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        .resource-value {
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: #fff0d0;
+            letter-spacing: 1px;
+            text-shadow: 0 0 20px rgba(255, 200, 150, 0.2);
+        }
+
+        .resource-rate {
+            font-size: 1rem;
+            color: #b8a0c0;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 4px 14px;
+            border-radius: 40px;
+            border: 1px solid rgba(200, 130, 255, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .resource-rate span {
+            color: #b0e0b0;
+            font-weight: 600;
+        }
+
+        .click-area {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 28px;
+        }
+
+        .click-btn {
+            background: radial-gradient(circle at 30% 30%, #6b3a7a, #3a1f42);
+            border: 4px solid rgba(200, 130, 255, 0.3);
+            width: 100%;
+            max-width: 480px;
+            aspect-ratio: 16 / 9;
+            border-radius: 20px;
+            box-shadow: 0 12px 30px rgba(200, 80, 220, 0.5), 0 0 0 2px rgba(255, 200, 240, 0.15);
+            cursor: pointer;
+            transition: all 0.1s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+        }
+
+        .click-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 16px 40px rgba(200, 80, 220, 0.7), 0 0 0 4px rgba(255, 200, 240, 0.25);
+            border-color: rgba(200, 130, 255, 0.6);
+        }
+
+        .click-btn:active {
+            transform: scale(0.96);
+            box-shadow: 0 6px 20px rgba(200, 80, 220, 0.6);
+        }
+
+        .click-btn img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            background: #2d1b33;
+            color: #fff0d0;
+            font-size: 0.9rem;
+        }
+
+        .click-btn .fallback-text {
+            display: none;
+            position: absolute;
+            color: #fff0d0;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.4;
+            pointer-events: none;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .click-btn.error img {
+            opacity: 0.3;
+        }
+        .click-btn.error .fallback-text {
+            display: block;
+        }
+
+        .click-btn .power-badge {
+            position: absolute;
+            bottom: 10px;
+            right: 12px;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(4px);
+            border: 2px solid #ffb7e6;
+            border-radius: 40px;
+            padding: 4px 16px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff0d0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+            pointer-events: none;
+            white-space: nowrap;
+        }
+        .click-btn .power-badge span {
+            color: #ffb7e6;
+        }
+
+        .collection-title {
+            color: #d0b0d8;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 20px 0 12px 6px;
+            opacity: 0.7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .collection-title .progress {
+            font-size: 0.8rem;
+            color: #b8a0c0;
+            letter-spacing: 0;
+            text-transform: none;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 14px;
+            border-radius: 40px;
+        }
+
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-bottom: 8px;
+            justify-content: center;
+        }
+
+        .collection-card {
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 12px;
+            padding: 8px 6px 10px;
+            border: 2px solid rgba(200, 130, 255, 0.1);
+            transition: all 0.2s;
+            text-align: center;
+            position: relative;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .collection-card.unlocked {
+            border-color: rgba(255, 200, 100, 0.4);
+            background: rgba(255, 200, 100, 0.05);
+        }
+
+        .collection-card .card-image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #1a0b1f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 4px;
+        }
+
+        .collection-card .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .collection-card .card-image .locked-placeholder {
+            color: #6a4a6a;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .collection-card .card-name {
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: #d0b0d8;
+            margin-bottom: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+        }
+
+        .collection-card .card-status {
+            font-size: 0.6rem;
+            color: #8a7a8a;
+            margin-top: 2px;
+        }
+
+        .collection-card .unlock-btn {
+            background: linear-gradient(135deg, #7c4d8a, #a068b0);
+            border: none;
+            color: white;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-size: 0.6rem;
+            cursor: pointer;
+            transition: all 0.12s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            width: 100%;
+            margin-top: 2px;
+        }
+
+        .collection-card .unlock-btn:hover:not(:disabled) {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(160, 80, 200, 0.4);
+            background: linear-gradient(135deg, #8e5da0, #b078c0);
+        }
+
+        .collection-card .unlock-btn:active:not(:disabled) {
+            transform: scale(0.96);
+        }
+
+        .collection-card .unlock-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            filter: grayscale(0.6);
+            transform: none !important;
+        }
+
+        .collection-card .unlock-btn.unlocked-btn {
+            background: #3a2a40;
+            color: #888;
+            border-color: #444;
+            box-shadow: none;
+            cursor: default;
+        }
+
+        .collection-card .cost-label {
+            font-size: 0.55rem;
+            color: #f9e3b6;
+            background: rgba(255, 200, 100, 0.1);
+            padding: 1px 6px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 200, 100, 0.1);
+            display: inline-block;
+            margin-top: 1px;
+        }
+
+        .collection-card.eternal-card {
+            grid-column: span 5;
+            background: linear-gradient(145deg, rgba(40, 20, 50, 0.9), rgba(60, 30, 70, 0.9));
+            border: 3px solid transparent;
+            border-image: linear-gradient(135deg, #ffd700, #ff6b6b, #ffd700, #ff6b6b) 1;
+            border-image-slice: 1;
+            border-radius: 20px;
+            padding: 16px 14px 18px;
+            min-height: 200px;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.15), inset 0 0 60px rgba(255, 215, 0, 0.05);
+            animation: eternalGlow 3s ease-in-out infinite;
+            position: relative;
+        }
+
+        .collection-card.eternal-card::before {
+            content: '👑';
+            position: absolute;
+            top: -10px;
+            right: -6px;
+            font-size: 1.8rem;
+            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6));
+            z-index: 2;
+        }
+
+        .collection-card.eternal-card::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, #ffd700, #ff6b6b, #ffd700, #ff6b6b);
+            z-index: -1;
+            opacity: 0.3;
+            filter: blur(8px);
+            animation: eternalBorderGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes eternalGlow {
+            0%,
+            100% {
+                box-shadow: 0 0 30px rgba(255, 215, 0, 0.15), inset 0 0 60px rgba(255, 215, 0, 0.05);
+            }
+            50% {
+                box-shadow: 0 0 50px rgba(255, 215, 0, 0.3), inset 0 0 80px rgba(255, 215, 0, 0.1);
+            }
+        }
+
+        @keyframes eternalBorderGlow {
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        .collection-card.eternal-card .card-image {
+            border-radius: 12px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            max-width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .collection-card.eternal-card .card-name {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            letter-spacing: 1px;
+        }
+
+        .collection-card.eternal-card .cost-label {
+            font-size: 0.8rem;
+            background: rgba(255, 215, 0, 0.15);
+            border-color: rgba(255, 215, 0, 0.3);
+            color: #ffd700;
+            padding: 2px 12px;
+        }
+
+        .collection-card.eternal-card .unlock-btn {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            color: #1a0b1f;
+            font-weight: 800;
+            font-size: 0.85rem;
+            padding: 6px 20px;
+            border: 1px solid rgba(255, 215, 0, 0.4);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+            width: auto;
+            max-width: 200px;
+        }
+
+        .collection-card.eternal-card .unlock-btn:hover:not(:disabled) {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
+        }
+
+        .collection-card.eternal-card .unlock-btn.unlocked-btn {
+            background: linear-gradient(135deg, #3a2a40, #4a3a50);
+            color: #ffd700;
+            border-color: rgba(255, 215, 0, 0.3);
+            box-shadow: none;
+        }
+
+        .collection-card.eternal-card .unlock-btn:disabled {
+            background: #3a2a40;
+            color: #666;
+            border-color: #444;
+        }
+
+        .collection-card.eternal-card.unlocked {
+            border-image: linear-gradient(135deg, #ffd700, #ff6b6b, #ffd700, #ff6b6b) 1;
+            background: linear-gradient(145deg, rgba(60, 30, 70, 0.9), rgba(80, 40, 90, 0.9));
+        }
+
+        .collection-card.eternal-card .card-image .locked-placeholder {
+            font-size: 3.5rem;
+            color: #8a6a8a;
+        }
+
+        .collection-card.eternal-card.unlocked::before {
+            content: '🌟';
+            animation: starSpin 4s linear infinite;
+        }
+
+        @keyframes starSpin {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+            50% {
+                transform: rotate(180deg) scale(1.2);
+            }
+            100% {
+                transform: rotate(360deg) scale(1);
+            }
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            border: 2px solid rgba(200, 130, 255, 0.3);
+            background: #1a0b1f;
+            padding: 20px 24px 24px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .modal-content .modal-image-wrap {
+            max-width: 100%;
+            max-height: 60vh;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #0a0510;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content .modal-image-wrap img {
+            max-width: 100%;
+            max-height: 60vh;
+            border-radius: 16px;
+            display: block;
+        }
+
+        .modal-content .modal-comment {
+            color: #f0e0f0;
+            font-size: 1.1rem;
+            font-weight: 400;
+            text-align: center;
+            padding: 6px 16px;
+            background: rgba(200, 130, 255, 0.08);
+            border-radius: 40px;
+            border: 1px solid rgba(200, 130, 255, 0.15);
+            max-width: 90%;
+            line-height: 1.5;
+            letter-spacing: 0.5px;
+        }
+
+        .modal-content .modal-comment::before {
+            content: '💬 ';
+            opacity: 0.6;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: -14px;
+            right: -14px;
+            background: rgba(200, 80, 220, 0.8);
+            border: 2px solid #fff;
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.4rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.15s;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-close:hover {
+            transform: scale(1.1);
+            background: rgba(220, 80, 240, 0.9);
+        }
+
+        .upgrades-title {
+            color: #d0b0d8;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 20px 0 12px 6px;
+            opacity: 0.7;
+        }
+
+        .upgrade-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .upgrade-item {
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 20px;
+            padding: 14px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid rgba(200, 130, 255, 0.1);
+            transition: all 0.15s;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .upgrade-item:hover {
+            background: rgba(0, 0, 0, 0.5);
+            border-color: rgba(200, 130, 255, 0.25);
+        }
+
+        .upgrade-info {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            min-width: 140px;
+        }
+
+        .upgrade-name {
+            font-weight: 600;
+            color: #f5e6f0;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .upgrade-name .emoji {
+            font-size: 1.2rem;
+        }
+
+        .upgrade-desc {
+            font-size: 0.85rem;
+            color: #b8a0c0;
+            margin-top: 2px;
+        }
+
+        .upgrade-meta {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .upgrade-cost {
+            font-size: 0.95rem;
+            color: #f9e3b6;
+            background: rgba(255, 200, 100, 0.1);
+            padding: 4px 14px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 200, 100, 0.15);
+            white-space: nowrap;
+        }
+
+        .upgrade-cost .icon {
+            margin-right: 4px;
+        }
+
+        .upgrade-btn {
+            background: linear-gradient(135deg, #7c4d8a, #a068b0);
+            border: none;
+            color: white;
+            font-weight: 700;
+            padding: 8px 24px;
+            border-radius: 40px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.12s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            white-space: nowrap;
+        }
+
+        .upgrade-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(160, 80, 200, 0.4);
+            background: linear-gradient(135deg, #8e5da0, #b078c0);
+        }
+
+        .upgrade-btn:active:not(:disabled) {
+            transform: scale(0.96);
+        }
+
+        .upgrade-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            filter: grayscale(0.6);
+            transform: none !important;
+        }
+
+        .upgrade-btn.bought {
+            background: #3a2a40;
+            color: #888;
+            border-color: #444;
+            box-shadow: none;
+            cursor: default;
+        }
+
+        .upgrade-count {
+            font-size: 0.75rem;
+            color: #a080a0;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 10px;
+            border-radius: 30px;
+            margin-left: 4px;
+        }
+
+        .footer {
+            margin-top: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid rgba(200, 130, 255, 0.1);
+            padding-top: 18px;
+            font-size: 0.8rem;
+            color: #7a5a7a;
+        }
+
+        .footer .title-small {
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .click-flash {
+            animation: flash 0.15s ease;
+        }
+
+        @keyframes flash {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 200, 240, 0.8);
+            }
+            100% {
+                transform: scale(1.04);
+                box-shadow: 0 0 60px 20px rgba(255, 200, 240, 0.3);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .collection-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+            }
+            .collection-card {
+                min-height: 100px;
+                padding: 6px 4px 8px;
+            }
+            .collection-card .card-name {
+                font-size: 0.55rem;
+            }
+            .collection-card .unlock-btn {
+                font-size: 0.55rem;
+                padding: 2px 6px;
+            }
+            .collection-card .cost-label {
+                font-size: 0.5rem;
+                padding: 1px 4px;
+            }
+            .collection-card.eternal-card {
+                grid-column: span 3;
+                min-height: 160px;
+                padding: 12px 10px 14px;
+            }
+            .collection-card.eternal-card .card-image {
+                max-width: 70%;
+            }
+            .collection-card.eternal-card .card-name {
+                font-size: 0.9rem;
+            }
+            .collection-card.eternal-card .unlock-btn {
+                font-size: 0.7rem;
+                padding: 4px 14px;
+            }
+            .collection-card.eternal-card::before {
+                font-size: 1.4rem;
+                top: -8px;
+                right: -4px;
+            }
+            .modal-content {
+                padding: 14px 16px 18px;
+                max-width: 95%;
+            }
+            .modal-content .modal-comment {
+                font-size: 0.9rem;
+                padding: 4px 12px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .collection-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 6px;
+            }
+            .collection-card {
+                min-height: 90px;
+                padding: 4px 3px 6px;
+            }
+            .collection-card .card-name {
+                font-size: 0.5rem;
+            }
+            .collection-card .unlock-btn {
+                font-size: 0.5rem;
+                padding: 2px 4px;
+            }
+            .collection-card .cost-label {
+                font-size: 0.45rem;
+                padding: 0px 3px;
+            }
+            .collection-card.eternal-card {
+                grid-column: span 2;
+                min-height: 140px;
+                padding: 10px 8px 12px;
+            }
+            .collection-card.eternal-card .card-image {
+                max-width: 80%;
+            }
+            .collection-card.eternal-card .card-name {
+                font-size: 0.8rem;
+            }
+            .collection-card.eternal-card .unlock-btn {
+                font-size: 0.6rem;
+                padding: 3px 10px;
+            }
+            .collection-card.eternal-card::before {
+                font-size: 1.2rem;
+                top: -6px;
+                right: -2px;
+            }
+            .resource-area {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 8px;
+            }
+            .resource-rate {
+                align-self: flex-start;
+            }
+            .modal-content .modal-comment {
+                font-size: 0.8rem;
+                padding: 3px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container" id="app">
+        <div class="header">
+            <div class="title">
+                ⚡ノナ伝説
+                <small>放置</small>
+            </div>
+            <div class="level-badge" id="levelDisplay">🥚 ノナの卵</div>
+        </div>
+
+        <div class="resource-area">
+            <div class="resource-main">
+                <span class="resource-icon">✨</span>
+                <span class="resource-value" id="powerDisplay">0</span>
+            </div>
+            <div class="resource-rate">
+                ⚡ <span id="rateDisplay">0</span>/s
+            </div>
+        </div>
+
+        <div class="click-area">
+            <button class="click-btn" id="clickBtn">
+                <img id="nonaImage" alt="ノナ" />
+                <div class="fallback-text">ノナ<br />をクリック</div>
+                <div class="power-badge">+<span id="clickPowerDisplay">1</span></div>
+            </button>
+        </div>
+
+        <div class="collection-title">
+            <span>🖼️ ノナのコレクション</span>
+            <span class="progress" id="collectionProgress">0 / 21</span>
+        </div>
+        <div class="collection-grid" id="collectionGrid"></div>
+
+        <div class="upgrades-title">🔮 ノナの歩み</div>
+        <div class="upgrade-list" id="upgradeList"></div>
+
+        <div class="footer">
+            <span class="title-small">✨ ノナ伝説 v1.0</span>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">✕</button>
+            <div class="modal-image-wrap">
+                <img id="modalImage" src="" alt="コレクション画像" />
+            </div>
+            <div class="modal-comment" id="modalComment">ここにコメントが表示されます</div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            'use strict';
+
+            const MAIN_IMAGE_URL = 'https://i.postimg.cc/Nf1kGFkr/VRChat-2025-10-13-01-03-31-607-2560x1440.png';
+
+            const COLLECTION_IMAGES = [
+                { id: 1, name: 'ノナ・スリープ', url: 'https://i.postimg.cc/xdnQGsRb/1.png', cost: 500, comment: 'ノナの寝顔。ここから冒険が始まる。' },
+                { id: 2, name: 'ノナ・クライ', url: 'https://i.postimg.cc/7YzrFvtd/2.png', cost: 5000, comment: '何かがあったノナ。' },
+                { id: 3, name: 'ノナ・スラッシュ', url: 'https://i.postimg.cc/L4wMQ4DY/3.png', cost: 40000, comment: '斜に構えているノナ。' },
+                { id: 4, name: 'ノナ・マニー', url: 'https://i.postimg.cc/C5BpM9FW/4.png', cost: 180000, comment: '使用料の高いノナ。実はこのゲームをつくるのにも多額のお金が...' },
+                { id: 5, name: 'ノナ・アングリー', url: 'https://i.postimg.cc/d0wFRWBz/5.png', cost: 750000, comment: 'キレられちゃった。' },
+                { id: 6, name: 'ノナ・キル', url: 'https://i.postimg.cc/yxgC621W/6.png', cost: 3000000, comment: 'なんて？' },
+                { id: 7, name: 'ノナ・エネルギー', url: 'https://i.postimg.cc/wTNYCK4C/7.png', cost: 10000000, comment: 'そうだね。' },
+                { id: 8, name: 'ノナ・リクルート', url: 'https://i.postimg.cc/dtCcbMSM/8.png', cost: 34400000, comment: 'いいね。' },
+                { id: 9, name: 'ノナ・無駄', url: 'https://i.postimg.cc/FHQXmP2h/9.png', cost: 118336000, comment: 'そういうこともあるよね。' },
+                { id: 10, name: 'ノナ・タワー', url: 'https://i.postimg.cc/RZzx9PjW/10.png', cost: 407075840, comment: 'ノナタワー好評(?)配信中！' },
+                { id: 11, name: 'ノナ・狂気', url: 'https://i.postimg.cc/0yq1xthT/11.png', cost: 1400340890, comment: 'トロイの木馬？' },
+                { id: 12, name: 'ノナ・バブー', url: 'https://i.postimg.cc/FKDMyh1m/12.png', cost: 4817172662, comment: '吸引力強め。' },
+                { id: 13, name: 'ノナ・0人', url: 'https://i.postimg.cc/zf2JJCCS/13.png', cost: 16571073957, comment: 'これはオフ会0人。' },
+                { id: 14, name: 'ノナ・米津', url: 'https://i.postimg.cc/FHZr651q/14.png', cost: 57004494413, comment: '海老揉め。' },
+                { id: 15, name: 'ノナ・ハップン', url: 'https://i.postimg.cc/zGSZfCrC/15.jpg', cost: 196095460780, comment: 'なんかびっくりしてる。' },
+                { id: 16, name: 'ノナ・自然', url: 'https://i.postimg.cc/TPCzVThd/16.jpg', cost: 674568385083, comment: 'おしり痛そう。' },
+                { id: 17, name: 'ノナ・夏', url: 'https://i.postimg.cc/XvQRfnXC/17.jpg', cost: 2320515244686, comment: '監視員さんを撃つ角度。' },
+                { id: 18, name: 'ノナ・お化け', url: 'https://i.postimg.cc/PxJBK08L/18.jpg', cost: 7982572441720, comment: 'うらめしや～～。' },
+                { id: 19, name: 'ノナ・冬', url: 'https://i.postimg.cc/hjYNYM91/19.jpg', cost: 27460049199517, comment: 'スタッドレスタイヤに変えなきゃ...' },
+                { id: 20, name: 'ノナ・封印', url: 'https://i.postimg.cc/9Mksk1Gx/20.jpg', cost: 94462569246339, comment: '「出してよ～～」『出さないよ～～』' },
+                { id: 21, name: 'ノナ・エターナル', url: 'https://i.postimg.cc/D0bR3s6y/21.jpg', cost: 332640000000000, isEternal: true, comment: '💫 これがノナの輝き。遊んでくれてありがとう！' },
+            ];
+
+            // ============================================================
+            // ★★★ 新称号：エターナル解放までをカバーする20段階 ★★★
+            // ============================================================
+            const LEVEL_NAMES = [
+                '🥚 ノナの卵',
+                '🌱 ノナの芽吹き',
+                '⭐ ノナの新星',
+                '📜 ノナの使者',
+                '⚔️ ノナの英雄',
+                '🏛️ ノナの伝説',
+                '🌌 ノナの神話',
+                '🏯 ノナの聖域',
+                '🔮 ノナの創世',
+                '♾️ ノナの無限',
+                '👁️ ノナの絶対',
+                '🌟 ノナの超越',
+                '🌀 ノナの万象',
+                '✨ ノナの星海',
+                '🌠 ノナの天穹',
+                '🔱 ノナの神域',
+                '⚡ ノナの覚醒',
+                '💫 ノナの銀河',
+                '🌏 ノナの根源',
+                '👑 ノナ・エターナル',
+            ];
+
+            const LEVEL_THRESHOLDS = [
+                0,              // 🥚
+                100,            // 🌱
+                500,            // ⭐
+                2000,           // 📜
+                8000,           // ⚔️
+                30000,          // 🏛️
+                100000,         // 🌌
+                300000,         // 🏯
+                800000,         // 🔮
+                2000000,        // ♾️
+                5000000,        // 👁️
+                10000000,       // 🌟
+                30000000,       // 🌀 万象
+                100000000,      // ✨ 星海
+                300000000,      // 🌠 天穹
+                1000000000,     // 🔱 神域
+                3000000000,     // ⚡ 覚醒
+                10000000000,    // 💫 銀河
+                30000000000,    // 🌏 根源
+                332640000000000, // 👑 エターナル
+            ];
+
+            // ============================================================
+
+            const game = {
+                power: 0,
+                totalPower: 0,
+                clickPower: 1,
+                autoPower: 0,
+                upgrades: [],
+                level: 0,
+                collection: COLLECTION_IMAGES.map(() => ({ unlocked: false })),
+                levelNames: LEVEL_NAMES,
+                levelThresholds: LEVEL_THRESHOLDS,
+            };
+
+            const UPGRADE_DEFS = [{
+                id: 'click1',
+                name: '応援の熱意',
+                emoji: '📣',
+                desc: 'クリック獲得量 +1',
+                baseCost: 10,
+                costMultiplier: 1.5,
+                maxLevel: 30,
+                effect: (level) => ({ clickPower: 1 * level }),
+                initialLevel: 0,
+            }, {
+                id: 'click2',
+                name: 'ノナの魅力',
+                emoji: '💖',
+                desc: 'クリック獲得量 ×2 （累積）',
+                baseCost: 150,
+                costMultiplier: 2.2,
+                maxLevel: 15,
+                effect: (level) => ({ clickMultiplier: Math.pow(2, level) }),
+                initialLevel: 0,
+            }, {
+                id: 'auto1',
+                name: 'ファンの増加',
+                emoji: '👥',
+                desc: '自動生成 +10/s （強力）',
+                baseCost: 30,
+                costMultiplier: 1.6,
+                maxLevel: 40,
+                effect: (level) => ({ autoPower: 10 * level }),
+                initialLevel: 0,
+            }, {
+                id: 'auto2',
+                name: 'ノナの活動',
+                emoji: '🎤',
+                desc: '自動生成 +25/s （さらに強力）',
+                baseCost: 200,
+                costMultiplier: 1.8,
+                maxLevel: 25,
+                effect: (level) => ({ autoPower: 25 * level }),
+                initialLevel: 0,
+            }, {
+                id: 'auto3',
+                name: '伝説のオーラ',
+                emoji: '🌀',
+                desc: '自動生成 ×3 （累積）',
+                baseCost: 800,
+                costMultiplier: 2.5,
+                maxLevel: 12,
+                effect: (level) => ({ autoMultiplier: Math.pow(3, level) }),
+                initialLevel: 0,
+            }, {
+                id: 'click3',
+                name: '神速の応援',
+                emoji: '⚡',
+                desc: 'クリック獲得量 +5',
+                baseCost: 600,
+                costMultiplier: 1.9,
+                maxLevel: 20,
+                effect: (level) => ({ clickPower: 5 * level }),
+                initialLevel: 0,
+            }, ];
+
+            // DOM参照
+            const powerDisplay = document.getElementById('powerDisplay');
+            const rateDisplay = document.getElementById('rateDisplay');
+            const levelDisplay = document.getElementById('levelDisplay');
+            const clickPowerDisplay = document.getElementById('clickPowerDisplay');
+            const clickBtn = document.getElementById('clickBtn');
+            const nonaImage = document.getElementById('nonaImage');
+            const upgradeListEl = document.getElementById('upgradeList');
+            const collectionGrid = document.getElementById('collectionGrid');
+            const collectionProgress = document.getElementById('collectionProgress');
+            const modalOverlay = document.getElementById('modalOverlay');
+            const modalImage = document.getElementById('modalImage');
+            const modalComment = document.getElementById('modalComment');
+            const modalClose = document.getElementById('modalClose');
+
+            nonaImage.src = MAIN_IMAGE_URL;
+            nonaImage.addEventListener('error', function() {
+                this.style.display = 'none';
+                clickBtn.classList.add('error');
+            });
+
+            function openModal(imageUrl, comment) {
+                modalImage.src = imageUrl;
+                modalComment.textContent = comment || '💬 コメントは準備中です…';
+                modalOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                modalOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            modalClose.addEventListener('click', closeModal);
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) closeModal();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeModal();
+            });
+
+            function initGame() {
+                game.upgrades = UPGRADE_DEFS.map(def => ({
+                    id: def.id,
+                    level: def.initialLevel || 0,
+                    def: def,
+                }));
+                applyAllUpgradeEffects();
+                updateUI();
+                saveGame();
+            }
+
+            function applyAllUpgradeEffects() {
+                let baseClick = 1;
+                let baseAuto = 5;
+                let clickMultiplier = 1;
+                let autoMultiplier = 1;
+
+                game.upgrades.forEach(up => {
+                    const def = up.def;
+                    const lv = up.level;
+                    if (lv === 0) return;
+                    const effect = def.effect(lv);
+                    if (effect.clickPower !== undefined) baseClick += effect.clickPower;
+                    if (effect.autoPower !== undefined) baseAuto += effect.autoPower;
+                    if (effect.clickMultiplier !== undefined) clickMultiplier *= effect.clickMultiplier;
+                    if (effect.autoMultiplier !== undefined) autoMultiplier *= effect.autoMultiplier;
+                });
+
+                game.clickPower = Math.floor(baseClick * clickMultiplier);
+                game.autoPower = Math.floor(baseAuto * autoMultiplier);
+
+                clickPowerDisplay.textContent = game.clickPower;
+            }
+
+            function getUpgradeCost(up) {
+                const def = up.def;
+                const lv = up.level;
+                if (lv >= def.maxLevel) return Infinity;
+                return Math.floor(def.baseCost * Math.pow(def.costMultiplier, lv));
+            }
+
+            function buyUpgrade(index) {
+                const up = game.upgrades[index];
+                if (!up) return false;
+                const def = up.def;
+                if (up.level >= def.maxLevel) return false;
+                const cost = getUpgradeCost(up);
+                if (game.power < cost) return false;
+
+                game.power -= cost;
+                up.level += 1;
+
+                applyAllUpgradeEffects();
+                updateUI();
+                saveGame();
+
+                const btn = document.querySelector(`.upgrade-item[data-index="${index}"] .upgrade-btn`);
+                if (btn) {
+                    btn.classList.add('click-flash');
+                    setTimeout(() => btn.classList.remove('click-flash'), 200);
+                }
+                return true;
+            }
+
+            function unlockCollection(index) {
+                const item = COLLECTION_IMAGES[index];
+                if (!item) return false;
+                if (game.collection[index].unlocked) return false;
+                if (game.power < item.cost) return false;
+
+                game.power -= item.cost;
+                game.collection[index].unlocked = true;
+
+                updateUI();
+                saveGame();
+
+                const card = document.querySelector(`.collection-card[data-index="${index}"]`);
+                if (card) {
+                    card.classList.add('click-flash');
+                    setTimeout(() => card.classList.remove('click-flash'), 200);
+                }
+                return true;
+            }
+
+            function updateLevel() {
+                const total = game.totalPower;
+                let newLevel = 0;
+                for (let i = game.levelThresholds.length - 1; i >= 0; i--) {
+                    if (total >= game.levelThresholds[i]) {
+                        newLevel = i;
+                        break;
+                    }
+                }
+                if (newLevel !== game.level) game.level = newLevel;
+                const name = game.levelNames[Math.min(game.level, game.levelNames.length - 1)] || '👑 ノナ・エターナル';
+                levelDisplay.textContent = name;
+            }
+
+            function renderCollection() {
+                let html = '';
+                let unlockedCount = 0;
+
+                COLLECTION_IMAGES.forEach((item, index) => {
+                    const isUnlocked = game.collection[index].unlocked;
+                    if (isUnlocked) unlockedCount++;
+
+                    const costDisplay = isUnlocked ? '✅ 解放済み' : `✨ ${item.cost.toLocaleString()}`;
+                    const btnText = isUnlocked ? '閲覧する' : '解放する';
+                    const btnClass = isUnlocked ? 'unlock-btn unlocked-btn' : 'unlock-btn';
+                    const disabled = !isUnlocked && game.power < item.cost;
+
+                    const eternalClass = item.isEternal ? 'eternal-card' : '';
+
+                    html += `
+                        <div class="collection-card ${isUnlocked ? 'unlocked' : ''} ${eternalClass}" data-index="${index}">
+                            <div class="card-image">
+                                ${isUnlocked 
+                                    ? `<img src="${item.url}" alt="${item.name}" loading="lazy" />` 
+                                    : `<div class="locked-placeholder">🔒</div>`
+                                }
+                            </div>
+                            <div class="card-name">${item.name}</div>
+                            <div class="cost-label">${costDisplay}</div>
+                            <button class="${btnClass}" data-index="${index}" ${disabled ? 'disabled' : ''}>
+                                ${btnText}
+                            </button>
+                        </div>
+                    `;
+                });
+
+                collectionGrid.innerHTML = html;
+                collectionProgress.textContent = `${unlockedCount} / ${COLLECTION_IMAGES.length}`;
+
+                document.querySelectorAll('.collection-card .unlock-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const index = parseInt(btn.dataset.index, 10);
+                        const isUnlocked = game.collection[index].unlocked;
+
+                        if (isUnlocked) {
+                            const item = COLLECTION_IMAGES[index];
+                            openModal(item.url, item.comment);
+                        } else {
+                            unlockCollection(index);
+                        }
+                    });
+                });
+            }
+
+            function updateUI() {
+                powerDisplay.textContent = Math.floor(game.power);
+                rateDisplay.textContent = game.autoPower;
+                updateLevel();
+                renderUpgrades();
+                renderCollection();
+                clickPowerDisplay.textContent = game.clickPower;
+            }
+
+            function renderUpgrades() {
+                let html = '';
+                game.upgrades.forEach((up, index) => {
+                    const def = up.def;
+                    const lv = up.level;
+                    const maxLv = def.maxLevel;
+                    const cost = getUpgradeCost(up);
+                    const isMax = lv >= maxLv;
+                    const canAfford = game.power >= cost && !isMax;
+
+                    let effectText = '';
+                    const eff = def.effect(lv + 1);
+                    if (eff.clickPower !== undefined) effectText = `クリック +${eff.clickPower}`;
+                    else if (eff.autoPower !== undefined) effectText = `自動 +${eff.autoPower}/s`;
+                    else if (eff.clickMultiplier !== undefined) effectText = `クリック ×${eff.clickMultiplier}`;
+                    else if (eff.autoMultiplier !== undefined) effectText = `自動 ×${eff.autoMultiplier}`;
+
+                    const costDisplay = isMax ? 'MAX' : `✨ ${cost}`;
+
+                    html += `
+                        <div class="upgrade-item" data-index="${index}">
+                            <div class="upgrade-info">
+                                <div class="upgrade-name">
+                                    <span class="emoji">${def.emoji}</span>
+                                    ${def.name}
+                                    <span class="upgrade-count">Lv.${lv}/${maxLv}</span>
+                                </div>
+                                <div class="upgrade-desc">
+                                    ${def.desc} 
+                                    <span style="color:#c0a0d0; margin-left:8px;">→ ${effectText}</span>
+                                </div>
+                            </div>
+                            <div class="upgrade-meta">
+                                <span class="upgrade-cost"><span class="icon">✨</span>${costDisplay}</span>
+                                <button class="upgrade-btn ${isMax ? 'bought' : ''}" 
+                                        data-index="${index}" 
+                                        ${!canAfford && !isMax ? 'disabled' : ''}>
+                                    ${isMax ? '完璧' : '購入'}
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+                upgradeListEl.innerHTML = html;
+
+                document.querySelectorAll('.upgrade-btn:not(.bought)').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const index = parseInt(btn.dataset.index, 10);
+                        buyUpgrade(index);
+                    });
+                });
+            }
+
+            function saveGame() {
+                const data = {
+                    power: game.power,
+                    totalPower: game.totalPower,
+                    upgrades: game.upgrades.map(up => ({ id: up.id, level: up.level })),
+                    collection: game.collection.map(c => ({ unlocked: c.unlocked })),
+                };
+                try {
+                    localStorage.setItem('nona_legend_save', JSON.stringify(data));
+                } catch (_) {}
+            }
+
+            function loadGame() {
+                try {
+                    const raw = localStorage.getItem('nona_legend_save');
+                    if (!raw) return false;
+                    const data = JSON.parse(raw);
+                    game.power = data.power || 0;
+                    game.totalPower = data.totalPower || 0;
+
+                    if (data.upgrades && Array.isArray(data.upgrades)) {
+                        data.upgrades.forEach(saved => {
+                            const target = game.upgrades.find(up => up.id === saved.id);
+                            if (target) {
+                                target.level = Math.min(saved.level, target.def.maxLevel);
+                            }
+                        });
+                    }
+
+                    if (data.collection && Array.isArray(data.collection)) {
+                        data.collection.forEach((saved, index) => {
+                            if (index < game.collection.length) {
+                                game.collection[index].unlocked = saved.unlocked || false;
+                            }
+                        });
+                    }
+
+                    applyAllUpgradeEffects();
+                    updateUI();
+                    return true;
+                } catch (_) {
+                    return false;
+                }
+            }
+
+            function gameLoop() {
+                if (game.autoPower > 0) {
+                    const gain = game.autoPower;
+                    game.power += gain;
+                    game.totalPower += gain;
+                    powerDisplay.textContent = Math.floor(game.power);
+                    updateLevel();
+                }
+            }
+
+            clickBtn.addEventListener('click', () => {
+                const gain = game.clickPower;
+                game.power += gain;
+                game.totalPower += gain;
+                powerDisplay.textContent = Math.floor(game.power);
+                updateLevel();
+                clickBtn.classList.add('click-flash');
+                setTimeout(() => clickBtn.classList.remove('click-flash'), 200);
+                saveGame();
+                renderUpgrades();
+                renderCollection();
+            });
+
+            function init() {
+                game.upgrades = UPGRADE_DEFS.map(def => ({
+                    id: def.id,
+                    level: def.initialLevel || 0,
+                    def: def,
+                }));
+
+                const loaded = loadGame();
+                if (!loaded) {
+                    applyAllUpgradeEffects();
+                    updateUI();
+                    saveGame();
+                } else {
+                    applyAllUpgradeEffects();
+                    updateUI();
+                }
+
+                setInterval(() => {
+                    gameLoop();
+                    saveGame();
+                    renderUpgrades();
+                    renderCollection();
+                }, 1000);
+
+                renderUpgrades();
+                renderCollection();
+            }
+
+            init();
+        })();
+    </script>
+</body>
+</html>
